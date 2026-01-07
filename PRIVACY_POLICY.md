@@ -2,7 +2,7 @@
 
 **Last Updated:** January 7, 2026
 
-**Wallet Mask** ("we", "our", or "us") is dedicated to protecting your privacy. This Privacy Policy explains how our Chrome extension handles your data.
+**Wallet Mask** is dedicated to protecting your privacy. This Privacy Policy explains how our Chrome extension handles your data.
 
 ## 1. Data Collection
 **We do not collect, store, transmit, or share any user data.** 
