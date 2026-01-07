@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallet Mask</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L3 7V12C3 16.97 6.84 21.65 12 23C17.16 21.65 21 16.97 21 12V7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </div>
+      <h1>Wallet Mask</h1>
+    </header>
+    
+    <main>
+      <div class="toggle-section">
+        <div class="toggle-info">
+          <span class="toggle-label">Address Blur</span>
+          <span class="toggle-status" id="status-text">Protected</span>
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" id="blur-toggle" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      
+      <p class="description">
+        Wallet addresses are <span id="blur-state">blurred</span> on this page
+      </p>
+    </main>
+    
+    <footer>
+      <span class="version">v1.0.0</span>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

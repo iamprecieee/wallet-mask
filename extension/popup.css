@@ -1,0 +1,213 @@
+/* Wallet Mask - Pixel Archives Theme */
+
+:root {
+  /* Pixel Archives Palette */
+  --color-primary: rgb(169, 56, 56);
+  /* Red */
+  --color-secondary: rgb(236, 236, 222);
+  /* Cream */
+  --color-background: rgb(236, 236, 222);
+  --color-text: rgb(169, 56, 56);
+  --color-success: #16a085;
+  --color-dark-success: #14987e;
+  --color-warning: #d97706;
+  --color-neutral: #666;
+  --color-accent: #3b82f6;
+
+  /* Spacing */
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+
+  /* Components */
+  --shadow-card: 0 4px 7px rgba(40, 40, 40, 1);
+  --shadow-hover: 0 6px 12px rgba(40, 40, 40, 1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.3);
+  --border-radius: 10px;
+  --border-width: 3px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-width: 320px;
+  border: var(--border-width) solid var(--color-primary);
+  /* Ensure border is visible inside the popup */
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding-bottom: var(--spacing-md);
+  border-bottom: var(--border-width) solid var(--color-primary);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--color-primary);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  background-color: var(--color-secondary);
+  border: var(--border-width) solid var(--color-primary);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.toggle-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+}
+
+.toggle-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 4px;
+}
+
+.toggle-label {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.toggle-status {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  color: var(--color-success);
+}
+
+.toggle-status.disabled {
+  color: var(--color-neutral);
+  text-decoration: line-through;
+}
+
+/* Retro Toggle Switch */
+.toggle-switch {
+  position: relative;
+  width: 60px;
+  height: 32px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-background);
+  border: var(--border-width) solid var(--color-primary);
+  border-radius: 32px;
+  transition: all 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  transition: all 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+input:checked+.slider {
+  background-color: var(--color-primary);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+input:checked+.slider::before {
+  transform: translateX(28px);
+  background-color: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
+}
+
+.description {
+  font-size: 14px;
+  color: var(--color-text);
+  border-top: var(--border-width) dashed var(--color-primary);
+  padding-top: var(--spacing-md);
+  margin-top: var(--spacing-small);
+}
+
+#blur-state {
+  font-weight: bold;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+#blur-state.visible {
+  background-color: var(--color-warning);
+  color: #fff;
+}
+
+footer {
+  font-size: 12px;
+  color: var(--color-neutral);
+  border-top: var(--border-width) solid var(--color-primary);
+  padding-top: var(--spacing-md);
+  font-weight: bold;
+}
+
+.version {
+  background: var(--color-background);
+  border: 1px solid var(--color-neutral);
+  padding: 2px 8px;
+  border-radius: 12px;
+}

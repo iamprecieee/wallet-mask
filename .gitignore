@@ -1,0 +1,9 @@
+target
+Cargo.lock
+*gen*
+pkg
+*zip
+P*md
+resize*
+.DS_Store
+.git
