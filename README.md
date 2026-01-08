@@ -10,8 +10,12 @@ Powered by **Rust** and **WebAssembly (WASM)**, it offers high-performance patte
   - **EVM (Ethereum, etc.)**: Full addresses (`0x...`) and ENS names (`*.eth`).
   - **Bitcoin (BTC)**: Legacy (`1...`, `3...`) and SegWit/Bech32 (`bc1...`).
   - **Solana (SOL)**: Base58 addresses.
-- **Truncated Address Detection**: Handles shortened addresses (e.g., `0x123...abc`, `bc1...969r`, `Vote1...1234`) commonly found on explorers like Etherscan and Solscan.
-- **Privacy First**: All processing happens locally in the browser. Zero data ver ever leaves your device.
+- **Transaction Hash Detection**:
+  - **ETH/EVM**: Transaction hashes (`0x` + 64 hex chars).
+  - **Bitcoin**: Transaction IDs (64 hex chars).
+  - **Solana**: Transaction signatures (86-88 Base58 chars).
+- **Truncated Pattern Detection**: Handles shortened addresses and transaction hashes (e.g., `0x123...abc`) commonly found on explorers like Etherscan and Solscan.
+- **Privacy First**: All processing happens locally in the browser. Zero data ever leaves your device.
 - **Toggle Control**: One-click enable/disable via the popup menu.
 
 ## Architecture
